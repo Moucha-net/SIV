@@ -1,0 +1,1 @@
+<h1>Hola mundo desde Yii Framework!!! ahora corremos desnudos por la casa, porque entendimos cómo es la funcionalidad de un controlador y sus vistas</h1>

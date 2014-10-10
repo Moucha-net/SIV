@@ -1,0 +1,8 @@
+#gmap_marker, div.#gmap_marker{
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+      }

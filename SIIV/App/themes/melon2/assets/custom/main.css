@@ -1,0 +1,298 @@
+@font-face {
+ font-family: FuenteSTAT;
+ src: url("font/Abadi_MT_Condensed.eot") /* EOT file for IE */
+}
+@font-face {
+ font-family: FuenteSTAT;
+ src: url("font/Abadi_MT_Condensed.ttf") /* TTF file for CSS3 browsers */
+}
+@font-face {
+ font-family: FuenteSTAT;
+ src: url("font/Abadi_MT_Condensed.otf") /* EOT file for IE */
+}
+@font-face {
+ font-family: FuenteSTAT;
+ src: url("font/Abadi_MT_Condensed.woff") /* TTF file for CSS3 browsers */
+}
+
+body {
+  font-family: FuenteSTAT!important;
+  color: #7F7F7F;
+  font-size: 16px;
+}
+
+#content {
+  background: #EEEEEE;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-size: 28px;
+  font-family: "Abadi MT Condensed Light";
+}
+
+.navbar {
+  background: #FFFFFF;
+  border-bottom: 3px solid #EA812C;
+}
+
+.navbar {
+  font-family: "Abadi MT Condensed Light";
+  /* DEPRECATED
+	.nav > li:active, .nav > li.open {
+		//border-left-color: rgba(0, 0, 0, 0.28);
+		//border-left-color: rgba(0, 0, 0, 0.65);
+
+		+ li {
+			//border-left-color: rgba(0, 0, 0, 0.65);
+		}
+	} */
+
+}
+
+.navbar .nav > li > a {
+  color: #7F7F7F;
+  font-size: 20px;
+  padding-top: 14px;
+  padding-bottom: 19px;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.navbar .nav > li > a:hover,
+.navbar .nav > li > a:focus {
+  color: #FFF;
+  background: #EA812C;
+  background: #EA812C;
+}
+
+#sidebar ul#nav li a {
+  color: #7F7F7F;
+  font-size: 18px;
+  font-weight:normal;
+}
+
+#sidebar ul#nav li a i {
+  color: #A8A8A8;
+}
+
+#sidebar ul#nav ul.sub-menu a:hover {
+  background: #F6F6F6;
+}
+
+.btn,
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ColVis_MasterButton,
+.fc-state-default {
+  background-color: #B3C941;
+  color: #FFF;
+}
+
+.btn:hover,
+.ui-state-default:hover,
+.ui-widget-content .ui-state-default:hover,
+.ui-widget-header .ui-state-default:hover,
+.ColVis_MasterButton:hover,
+.fc-state-default:hover,
+.btn:focus,
+.ui-state-default:focus,
+.ui-widget-content .ui-state-default:focus,
+.ui-widget-header .ui-state-default:focus,
+.ColVis_MasterButton:focus,
+.fc-state-default:focus {
+  color: #FFF;
+  background-color: #B3C941;
+ }
+
+ .btn:active,
+.ui-state-default:active,
+.ui-widget-content .ui-state-default:active,
+.ui-widget-header .ui-state-default:active,
+.ColVis_MasterButton:active,
+.fc-state-default:active,
+.btn.active,
+.ui-state-default.active,
+.ui-widget-content .ui-state-default.active,
+.ui-widget-header .ui-state-default.active,
+.ColVis_MasterButton.active,
+.fc-state-default.active {
+  background-color: #93A634;
+}
+
+.btn-primary {
+  background-color: #B3C941;
+  width: 122px;
+  height: 30px;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #B3C941;
+}
+
+.btn-secundary {
+  color: #ffffff;
+  background-color: #848484;
+  z-index: 2;
+  width: 122px;
+  height: 30px;
+}
+.btn-secundary:hover,
+.btn-secundary:focus {
+  color: #ffffff;
+  background-color: #848484;
+}
+.btn-secundary:active,
+.btn-secundary.active {
+  background-color: #93A634;
+  border-top: 1px solid #1c3463;
+}
+.btn-secundary.disabled,
+.btn-secundary.btn[disabled] {
+  background-color: #3968c6;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.btn-secundary .caret {
+  border-top-color: #ffffff;
+}
+
+.widget.boxtop {
+  border: 1px solid #EEEEEE;
+}
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  color: #707070;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+  border-color: #EA812C;
+}
+
+.table-highlight-head thead {
+  background-color: #A0BC3B;
+}
+
+.box-tabs .nav-tabs > li.active > a:hover,
+.box-tabs .nav-tabs > li.active > a:focus {
+  background-color: #A0BC3B;
+}
+
+.box-tabs .nav-tabs > li > a:hover,
+.box-tabs .nav-tabs > li > a:focus {
+  background-color: #A0BC3B;
+}
+
+.tabbable-custom > .nav-tabs {
+  padding-left: 33px;
+}
+
+.tabbable-custom > .nav-tabs > li.active {
+  border-top: 0px;
+}
+
+.tabbable-custom > .nav-tabs > li > a {
+  margin-right: 90px;
+  padding: 5px 10px;
+  color: #7F7F7F;
+  background-color: #F9F9F9;
+}
+
+.tabbable-custom > .nav-tabs > li > a:hover,
+.tabbable-custom > .nav-tabs > li > a:active {
+  background-color: #DADADA;
+  color: #7F7F7F;
+}
+
+.tabbable-custom > .tab-content {
+  background-color: #EEEEEE;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  padding: 10px;
+  overflow: auto;
+}
+
+/************LOGIN**********/
+.login {
+  background-color: #EEEEEE;
+}
+
+.login .box {
+  background-color: #E5E5E5;
+  box-shadow: 1px 1px 2px #888888;
+  margin: 100px auto;
+}
+
+.login .box .form-actions {
+  background-color: #E5E5E5;
+}
+
+.login .box .input-icon input {
+  border-left: 2px solid #EA812C;
+}
+
+.login .box .inner-box {
+  background-color: #E5E5E5;
+}
+
+.login .box .inner-box a {
+  color: #707070;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.login .box .inner-box a:hover {
+  color: #707070;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+.input-width-xlarge {
+  width: 315px !important;
+}
