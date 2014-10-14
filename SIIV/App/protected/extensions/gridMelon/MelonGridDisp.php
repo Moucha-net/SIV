@@ -86,17 +86,17 @@ class MelonGridDisp extends CWidget
 													}
 													else
 													{
-														if($colC == "idTipoDispositivo")
+														if($colC == "idMediaType")
 														{
-															$tipRech = (TipoDispositivo::model()->exists('idtipodispositivo='.$puesto->$colC)) ? TipoDispositivo::model()->find('idtipodispositivo='.$puesto->$colC)->nombreTipoDispositivo : "X";
+															$tipRech = (MediaType::model()->exists('idMediaType='.$puesto->$colC)) ? MediaType::model()->find('idMediaType='.$puesto->$colC)->name : "X";
 															echo "<td>".$tipRech."</td>";
 														}
-														else if($colC == "idClinica")
+														else if($colC == "idInstitution")
 														{
 															//Yii::log(Clinica::model()->find('idclinica='.$clave)->nombreClinica, CLogger::LEVEL_ERROR);
 															if($puesto->$colC != "")
 															{
-																$tipRechC = (Clinica::model()->exists('idclinica='.$puesto->$colC)) ? Clinica::model()->find('idclinica='.$puesto->$colC)->nombreClinica : "";
+																$tipRechC = (Institution::model()->exists('idInstitution='.$puesto->$colC)) ? Institution::model()->find('idInstitution='.$puesto->$colC)->name : "";
 																echo "<td>".$tipRechC."</td>";
 															}
 															else
@@ -133,59 +133,32 @@ class MelonGridDisp extends CWidget
 
 	public function run()
 	{
-		echo "
-		<script language='javascript'>
-			
-		var elim=[];
-		var borraTodo=false;
-		function showBoxes(){
-			borraTodo=true;
-		}
 
-		$('#eliminarAction').click(function(){
-			if(borraTodo)
-			{
-				var message = 'Your chose:';
-				   	
-				var forma = document.getElementsByName('Music');
-				//alert(forma.length);
-				for (i = 0; i < forma.length; i++){
-					if (forma[i].checked){
-				       	message = message + forma[i].id; 
-				       	elim[elim.length] = forma[i].id;
-				    }
-				  				   
-				}
-			}
-			
-			if (elim!=null) {
-        		for (var i=0; i <elim.length ; i++) { 
-     				var iddddd=elim[i];
-     				
-     				if (!isNaN(iddddd)) {
-     					$.ajax({
-							type: 'POST',
-							url: '".Yii::app()->baseUrl."/".$this->modulo."/delete/'+iddddd,
-							data: elim,
-							success: function () {
-								var exito=notyBasico('success','Se ha eliminado el ".$this->modulo." exitosamente','center');
-								setTimeout(function() { $(location).attr('href','".Yii::app()->baseUrl."/".$this->modulo."/'); }, 3000);
+	echo "
+	<script language='javascript'>
+	$(document).ready(function(){
+        'use strict';
+		$('#eliminarAction').click(function(){	
+			$('input[type=checkbox]:checked').each(function () {
+           		var check = $(this).attr('id');
+           			$.ajax({
+						type: 'POST',
+						url: \"".Yii::app()->baseUrl."/".$this->modulo."/delete/id/\"+check,
+						success: function () {
+							notyOK('Has been successfully deleted the record.');
+							setTimeout(function() { $(location).attr('href','".Yii::app()->baseUrl."/".$this->modulo."/admin'); }, 3000);
 								
-				  			},
-				            error: function(result) {
-
-				               var error=notyBasico('error','Ha ocurrido un error, por favor intentelo de nuevo','center');
-				            }
-						});
-     				}	
-     			}
-			}
-			else{
-				var warning=notyBasico('success','No ha seleccionado ningún registro','center');
-			}
-			elim=null;
-			borraTodo=false;
+				  		},
+				        error: function(result) {
+							notyError('ERROR');
+				        }
+					});
+				
+			});
 		});
+
+	});
+
 		</script>";
 		
 		/*		$this->_baseUrl = Yii::app()->getAssetManager()->publish(dirname(__FILE__));

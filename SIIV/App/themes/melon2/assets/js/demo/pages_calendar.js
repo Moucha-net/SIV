@@ -59,6 +59,7 @@ $(document).ready(function(){
                     //alert('Clicked on: ' + date);
                     
                     $('#calendar').fullCalendar( 'renderEvent', {id:'tbk', title: 'tbk',start:date, allDay: false, } );
+                    $(location).attr('href',"/STATInterpretes/STATV2/App/appointment/create");
 
                     // change the day's background color just for fun
                     //$(this).css('background-color', 'red');

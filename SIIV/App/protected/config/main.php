@@ -87,10 +87,10 @@ return array(
             // uncomment the following to use a MySQL database
             */
             'db'=>array(
-                'connectionString' => 'mysql:host=localhost;dbname=db_stat_test',
+                'connectionString' => 'mysql:host=localhost;dbname=db_siv',
                 'emulatePrepare' => true,
-                'username' => 'db_stat_test',
-                'password' => '12345Ab...',
+                'username' => 'db_siv',
+                'password' => 'Mouchane1234',
                 'charset' => 'utf8',
                 ),
 		

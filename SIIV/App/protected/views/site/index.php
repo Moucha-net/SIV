@@ -22,4 +22,3 @@
             //notyAlert('vientos!!',function(){console.log('ok click');},function(){console.log('cancel click');});
     });
 </script>
-
