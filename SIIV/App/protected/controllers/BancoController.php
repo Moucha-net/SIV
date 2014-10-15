@@ -122,9 +122,9 @@ class BancoController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Banco');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
+		$banco = Banco::model()->findAll();
+		$this->render('admin',array(
+			'banco'=>$banco, 
 		));
 	}
 
@@ -133,13 +133,9 @@ class BancoController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Banco('search');
-		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Banco']))
-			$model->attributes=$_GET['Banco'];
-
+		$banco = Banco::model()->findAll();
 		$this->render('admin',array(
-			'model'=>$model,
+			'banco'=>$banco, 
 		));
 	}
 

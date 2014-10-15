@@ -9343,3 +9343,164 @@ Stack trace:
 REQUEST_URI=/SIV/SIIV/App/assets/img/demo/avatar-2.jpg
 HTTP_REFERER=http://localhost/SIV/SIIV/App/comprobante
 ---
+2014/10/15 08:28:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/img/logo.png".' in /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/img/logo...')
+#1 /opt/lampp/htdocs/SIV/SIIV/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/SIV/SIIV/App/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/SIV/SIIV/App/assets/img/logo.png
+HTTP_REFERER=http://localhost/SIV/SIIV/App/banco
+---
+2014/10/15 08:28:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/img/demo/avatar-2.jpg".' in /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/img/demo...')
+#1 /opt/lampp/htdocs/SIV/SIIV/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/SIV/SIIV/App/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/SIV/SIIV/App/assets/img/demo/avatar-2.jpg
+HTTP_REFERER=http://localhost/SIV/SIIV/App/banco
+---
+2014/10/15 08:28:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/img/demo/avatar-1.jpg".' in /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/img/demo...')
+#1 /opt/lampp/htdocs/SIV/SIIV/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/SIV/SIIV/App/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/SIV/SIIV/App/assets/img/demo/avatar-1.jpg
+HTTP_REFERER=http://localhost/SIV/SIIV/App/banco
+---
+2014/10/15 08:28:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/img/demo/avatar-3.jpg".' in /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/img/demo...')
+#1 /opt/lampp/htdocs/SIV/SIIV/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/SIV/SIIV/App/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/SIV/SIIV/App/assets/img/demo/avatar-3.jpg
+HTTP_REFERER=http://localhost/SIV/SIIV/App/banco
+---
+2014/10/15 08:28:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/melon2/assets/custom/banco/admin.css".' in /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/melon2/a...')
+#1 /opt/lampp/htdocs/SIV/SIIV/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/SIV/SIIV/App/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/SIV/SIIV/App/themes/melon2/assets/custom/banco/admin.css
+HTTP_REFERER=http://localhost/SIV/SIIV/App/banco
+---
+2014/10/15 08:28:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/img/logo.png".' in /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/img/logo...')
+#1 /opt/lampp/htdocs/SIV/SIIV/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/SIV/SIIV/App/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/SIV/SIIV/App/assets/img/logo.png
+HTTP_REFERER=http://localhost/SIV/SIIV/App/banco
+---
+2014/10/15 08:28:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/img/demo/avatar-1.jpg".' in /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/img/demo...')
+#1 /opt/lampp/htdocs/SIV/SIIV/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/SIV/SIIV/App/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/SIV/SIIV/App/assets/img/demo/avatar-1.jpg
+HTTP_REFERER=http://localhost/SIV/SIIV/App/banco
+---
+2014/10/15 08:28:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/img/demo/avatar-3.jpg".' in /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/img/demo...')
+#1 /opt/lampp/htdocs/SIV/SIIV/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/SIV/SIIV/App/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/SIV/SIIV/App/assets/img/demo/avatar-3.jpg
+HTTP_REFERER=http://localhost/SIV/SIIV/App/banco
+---
+2014/10/15 08:28:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/img/demo/avatar-2.jpg".' in /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/img/demo...')
+#1 /opt/lampp/htdocs/SIV/SIIV/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/SIV/SIIV/App/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/SIV/SIIV/App/assets/img/demo/avatar-2.jpg
+HTTP_REFERER=http://localhost/SIV/SIIV/App/banco
+---
+2014/10/15 08:28:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/img/logo.png".' in /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/img/logo...')
+#1 /opt/lampp/htdocs/SIV/SIIV/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/SIV/SIIV/App/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/SIV/SIIV/App/assets/img/logo.png
+HTTP_REFERER=http://localhost/SIV/SIIV/App/banco
+---
+2014/10/15 08:28:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/img/demo/avatar-2.jpg".' in /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/img/demo...')
+#1 /opt/lampp/htdocs/SIV/SIIV/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/SIV/SIIV/App/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/SIV/SIIV/App/assets/img/demo/avatar-2.jpg
+HTTP_REFERER=http://localhost/SIV/SIIV/App/banco
+---
+2014/10/15 08:28:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/img/demo/avatar-1.jpg".' in /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/img/demo...')
+#1 /opt/lampp/htdocs/SIV/SIIV/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/SIV/SIIV/App/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/SIV/SIIV/App/assets/img/demo/avatar-1.jpg
+HTTP_REFERER=http://localhost/SIV/SIIV/App/banco
+---
+2014/10/15 08:28:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/img/demo/avatar-3.jpg".' in /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/img/demo...')
+#1 /opt/lampp/htdocs/SIV/SIIV/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/SIV/SIIV/App/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/SIV/SIIV/App/assets/img/demo/avatar-3.jpg
+HTTP_REFERER=http://localhost/SIV/SIIV/App/banco
+---
+2014/10/15 08:29:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "assets".' in /opt/lampp/htdocs/SIV/SIIV/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/SIV/SIIV/framework/web/CController.php(270): CController->missingAction('assets')
+#1 /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php(282): CController->run('assets')
+#2 /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php(141): CWebApplication->runController('banco/assets/im...')
+#3 /opt/lampp/htdocs/SIV/SIIV/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/SIV/SIIV/App/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/SIV/SIIV/App/banco/assets/img/demo/avatar-2.jpg
+HTTP_REFERER=http://localhost/SIV/SIIV/App/banco/create
+---
+2014/10/15 08:29:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "assets".' in /opt/lampp/htdocs/SIV/SIIV/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/SIV/SIIV/framework/web/CController.php(270): CController->missingAction('assets')
+#1 /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php(282): CController->run('assets')
+#2 /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php(141): CWebApplication->runController('banco/assets/im...')
+#3 /opt/lampp/htdocs/SIV/SIIV/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/SIV/SIIV/App/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/SIV/SIIV/App/banco/assets/img/demo/avatar-1.jpg
+HTTP_REFERER=http://localhost/SIV/SIIV/App/banco/create
+---
+2014/10/15 08:29:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "assets".' in /opt/lampp/htdocs/SIV/SIIV/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/SIV/SIIV/framework/web/CController.php(270): CController->missingAction('assets')
+#1 /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php(282): CController->run('assets')
+#2 /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php(141): CWebApplication->runController('banco/assets/im...')
+#3 /opt/lampp/htdocs/SIV/SIIV/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/SIV/SIIV/App/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/SIV/SIIV/App/banco/assets/img/logo.png
+HTTP_REFERER=http://localhost/SIV/SIIV/App/banco/create
+---
+2014/10/15 08:29:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "assets".' in /opt/lampp/htdocs/SIV/SIIV/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/SIV/SIIV/framework/web/CController.php(270): CController->missingAction('assets')
+#1 /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php(282): CController->run('assets')
+#2 /opt/lampp/htdocs/SIV/SIIV/framework/web/CWebApplication.php(141): CWebApplication->runController('banco/assets/im...')
+#3 /opt/lampp/htdocs/SIV/SIIV/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/SIV/SIIV/App/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/SIV/SIIV/App/banco/assets/img/demo/avatar-3.jpg
+HTTP_REFERER=http://localhost/SIV/SIIV/App/banco/create
+---
