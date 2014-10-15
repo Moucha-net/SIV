@@ -24,7 +24,7 @@ class MelonGrid extends CWidget
 								<span class='btn btn-xs' id='eliminarAction'><i class='icon-trash'></i> </span>
 								<div class='toolbar no-padding'>
 									<div class='btn-group'>
-										<a href='".Yii::app()->baseUrl."/".$this->modulo."/create'><span class='btn btn-xs' style='padding-top: 6px;'><i class='icon-plus'></i> </span></a>
+										<a href='".Yii::app()->baseUrl."/".$this->modulo."/create'><span class='btn btn-xs' ><i class='icon-plus'></i> </span></a>
 									</div>
 								</div>
 							</div>

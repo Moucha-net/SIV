@@ -117,13 +117,21 @@ h6,
   background-color: #EF3005;
   background: rgba(239, 48, 5, 30); 
 }
+.crumbs {
+  height: 50px;
+}
+.crumbs .breadcrumb li {
+    font-size: 20px;
+    padding-right: 5px;
+    padding-top: 5px;
+}
 .btn,
 .ui-state-default,
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default,
 .ColVis_MasterButton,
 .fc-state-default {
-  background-color: #B3C941;
+  background-color: #0C93F5;
   color: #FFF;
 }
 
@@ -140,7 +148,7 @@ h6,
 .ColVis_MasterButton:focus,
 .fc-state-default:focus {
   color: #FFF;
-  background-color: #B3C941;
+  background-color: #EF3005;
  }
 
  .btn:active,
@@ -157,7 +165,11 @@ h6,
 .fc-state-default.active {
   background-color: #93A634;
 }
-
+.btn-xs {
+  
+  font-size: 16px;
+  line-height: 35px;
+}
 .btn-primary {
   color: #ffffff;
   background-color: red;
@@ -198,7 +210,12 @@ h6,
 .btn-secundary .caret {
   border-top-color: #ffffff;
 }
-
+.widget.box .widget-header {
+    padding: 15px 15px 15px 0;
+}
+.widget.box .widget-header .toolbar.no-padding .btn {
+  font-size: 16px;
+}
 .widget.boxtop {
   border: 1px solid #EEEEEE;
 }
