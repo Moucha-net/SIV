@@ -71,7 +71,7 @@ class DescuentoController extends Controller
 		{
 			$model->attributes=$_POST['Descuento'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->iddescuento));
+				$this->redirect(array('view','id'=>$model->idDescuento));
 		}
 
 		$this->render('create',array(
@@ -95,7 +95,7 @@ class DescuentoController extends Controller
 		{
 			$model->attributes=$_POST['Descuento'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->iddescuento));
+				$this->redirect(array('view','id'=>$model->idDescuento));
 		}
 
 		$this->render('update',array(

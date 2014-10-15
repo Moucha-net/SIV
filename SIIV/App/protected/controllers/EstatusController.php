@@ -71,7 +71,7 @@ class EstatusController extends Controller
 		{
 			$model->attributes=$_POST['Estatus'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idestatus));
+				$this->redirect(array('view','id'=>$model->idEstatus));
 		}
 
 		$this->render('create',array(
@@ -95,7 +95,7 @@ class EstatusController extends Controller
 		{
 			$model->attributes=$_POST['Estatus'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idestatus));
+				$this->redirect(array('view','id'=>$model->idEstatus));
 		}
 
 		$this->render('update',array(

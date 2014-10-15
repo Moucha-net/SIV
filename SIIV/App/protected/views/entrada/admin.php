@@ -45,17 +45,18 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'identrada',
+		'idEntrada',
 		'idIntermediario',
-		'idProducto',
 		'fecha',
 		'hora',
 		'observaciones',
-		/*
 		'cantidadEntrada',
+		/*
 		'totalEntrada',
 		'fechaAlta',
-		'idUsuario',
+		'usuarioCreacion',
+		'idStock',
+		'idEstatus',
 		*/
 		array(
 			'class'=>'CButtonColumn',

@@ -5,20 +5,20 @@
 
 <div class="view">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('idestatus')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->idestatus), array('view', 'id'=>$data->idestatus)); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('idEstatus')); ?>:</b>
+	<?php echo CHtml::link(CHtml::encode($data->idEstatus), array('view', 'id'=>$data->idEstatus)); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('nombreEstatus')); ?>:</b>
-	<?php echo CHtml::encode($data->nombreEstatus); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('nombre')); ?>:</b>
+	<?php echo CHtml::encode($data->nombre); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('fechaAlta')); ?>:</b>
 	<?php echo CHtml::encode($data->fechaAlta); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('idUsuario')); ?>:</b>
-	<?php echo CHtml::encode($data->idUsuario); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('usuarioCreacion')); ?>:</b>
+	<?php echo CHtml::encode($data->usuarioCreacion); ?>
 	<br />
 
 

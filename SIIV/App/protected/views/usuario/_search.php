@@ -1,6 +1,6 @@
 <?php
-/* @var $this UsuariosController */
-/* @var $model Usuarios */
+/* @var $this UsuarioController */
+/* @var $model Usuario */
 /* @var $form CActiveForm */
 ?>
 
@@ -12,8 +12,8 @@
 )); ?>
 
 	<div class="row">
-		<?php echo $form->label($model,'idusuario'); ?>
-		<?php echo $form->textField($model,'idusuario'); ?>
+		<?php echo $form->label($model,'idUsuario'); ?>
+		<?php echo $form->textField($model,'idUsuario'); ?>
 	</div>
 
 	<div class="row">
@@ -47,11 +47,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'contrasena'); ?>
-		<?php echo $form->textField($model,'contrasena',array('size'=>45,'maxlength'=>45)); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'idRol'); ?>
 		<?php echo $form->textField($model,'idRol'); ?>
 	</div>
@@ -62,8 +57,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'idUsuarioGen'); ?>
-		<?php echo $form->textField($model,'idUsuarioGen',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->label($model,'usuarioCreacion'); ?>
+		<?php echo $form->textField($model,'usuarioCreacion',array('size'=>45,'maxlength'=>45)); ?>
 	</div>
 
 	<div class="row buttons">

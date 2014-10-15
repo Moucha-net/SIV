@@ -71,7 +71,7 @@ class BancoController extends Controller
 		{
 			$model->attributes=$_POST['Banco'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idbanco));
+				$this->redirect(array('view','id'=>$model->idBanco));
 		}
 
 		$this->render('create',array(
@@ -95,7 +95,7 @@ class BancoController extends Controller
 		{
 			$model->attributes=$_POST['Banco'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idbanco));
+				$this->redirect(array('view','id'=>$model->idBanco));
 		}
 
 		$this->render('update',array(

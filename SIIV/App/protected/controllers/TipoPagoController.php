@@ -71,7 +71,7 @@ class TipoPagoController extends Controller
 		{
 			$model->attributes=$_POST['TipoPago'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idtipoPago));
+				$this->redirect(array('view','id'=>$model->idTipoPago));
 		}
 
 		$this->render('create',array(
@@ -95,7 +95,7 @@ class TipoPagoController extends Controller
 		{
 			$model->attributes=$_POST['TipoPago'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idtipoPago));
+				$this->redirect(array('view','id'=>$model->idTipoPago));
 		}
 
 		$this->render('update',array(

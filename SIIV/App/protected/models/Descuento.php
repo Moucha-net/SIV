@@ -4,12 +4,15 @@
  * This is the model class for table "descuento".
  *
  * The followings are the available columns in table 'descuento':
- * @property integer $iddescuento
- * @property string $nombreDescuento
+ * @property integer $idDescuento
+ * @property string $nombre
  * @property string $descripcion
  * @property integer $porcentaje
  * @property string $fechaAlta
- * @property integer $idUsuario
+ * @property string $usuarioCreacion
+ *
+ * The followings are the available model relations:
+ * @property Salida[] $salidas
  */
 class Descuento extends CActiveRecord
 {
@@ -29,12 +32,12 @@ class Descuento extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('porcentaje, idUsuario', 'numerical', 'integerOnly'=>true),
-			array('nombreDescuento, descripcion', 'length', 'max'=>45),
+			array('porcentaje', 'numerical', 'integerOnly'=>true),
+			array('nombre, descripcion, usuarioCreacion', 'length', 'max'=>45),
 			array('fechaAlta', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('iddescuento, nombreDescuento, descripcion, porcentaje, fechaAlta, idUsuario', 'safe', 'on'=>'search'),
+			array('idDescuento, nombre, descripcion, porcentaje, fechaAlta, usuarioCreacion', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -46,6 +49,7 @@ class Descuento extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'salidas' => array(self::HAS_MANY, 'Salida', 'idDescuento'),
 		);
 	}
 
@@ -55,12 +59,12 @@ class Descuento extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'iddescuento' => 'Iddescuento',
-			'nombreDescuento' => 'Nombre Descuento',
+			'idDescuento' => 'Id Descuento',
+			'nombre' => 'Nombre',
 			'descripcion' => 'Descripcion',
 			'porcentaje' => 'Porcentaje',
 			'fechaAlta' => 'Fecha Alta',
-			'idUsuario' => 'Id Usuario',
+			'usuarioCreacion' => 'Usuario Creacion',
 		);
 	}
 
@@ -82,12 +86,12 @@ class Descuento extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('iddescuento',$this->iddescuento);
-		$criteria->compare('nombreDescuento',$this->nombreDescuento,true);
+		$criteria->compare('idDescuento',$this->idDescuento);
+		$criteria->compare('nombre',$this->nombre,true);
 		$criteria->compare('descripcion',$this->descripcion,true);
 		$criteria->compare('porcentaje',$this->porcentaje);
 		$criteria->compare('fechaAlta',$this->fechaAlta,true);
-		$criteria->compare('idUsuario',$this->idUsuario);
+		$criteria->compare('usuarioCreacion',$this->usuarioCreacion,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

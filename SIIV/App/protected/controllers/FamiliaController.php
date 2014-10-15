@@ -71,7 +71,7 @@ class FamiliaController extends Controller
 		{
 			$model->attributes=$_POST['Familia'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idfamilia));
+				$this->redirect(array('view','id'=>$model->idFamilia));
 		}
 
 		$this->render('create',array(
@@ -95,7 +95,7 @@ class FamiliaController extends Controller
 		{
 			$model->attributes=$_POST['Familia'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idfamilia));
+				$this->redirect(array('view','id'=>$model->idFamilia));
 		}
 
 		$this->render('update',array(

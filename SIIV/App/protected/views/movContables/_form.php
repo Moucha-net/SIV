@@ -38,9 +38,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'idUsuario'); ?>
-		<?php echo $form->textField($model,'idUsuario'); ?>
-		<?php echo $form->error($model,'idUsuario'); ?>
+		<?php echo $form->labelEx($model,'usuarioCreacion'); ?>
+		<?php echo $form->textField($model,'usuarioCreacion',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($model,'usuarioCreacion'); ?>
 	</div>
 
 	<div class="row buttons">

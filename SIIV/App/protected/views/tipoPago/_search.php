@@ -12,13 +12,13 @@
 )); ?>
 
 	<div class="row">
-		<?php echo $form->label($model,'idtipoPago'); ?>
-		<?php echo $form->textField($model,'idtipoPago'); ?>
+		<?php echo $form->label($model,'idTipoPago'); ?>
+		<?php echo $form->textField($model,'idTipoPago'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'nombreTipoPago'); ?>
-		<?php echo $form->textField($model,'nombreTipoPago',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->label($model,'nombre'); ?>
+		<?php echo $form->textField($model,'nombre',array('size'=>45,'maxlength'=>45)); ?>
 	</div>
 
 	<div class="row">
@@ -27,8 +27,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'idUsuario'); ?>
-		<?php echo $form->textField($model,'idUsuario'); ?>
+		<?php echo $form->label($model,'usuarioCreacion'); ?>
+		<?php echo $form->textField($model,'usuarioCreacion',array('size'=>45,'maxlength'=>45)); ?>
 	</div>
 
 	<div class="row buttons">

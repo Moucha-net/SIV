@@ -71,7 +71,7 @@ class AlmacenController extends Controller
 		{
 			$model->attributes=$_POST['Almacen'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idalmacen));
+				$this->redirect(array('view','id'=>$model->idAlmacen));
 		}
 
 		$this->render('create',array(
@@ -95,7 +95,7 @@ class AlmacenController extends Controller
 		{
 			$model->attributes=$_POST['Almacen'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idalmacen));
+				$this->redirect(array('view','id'=>$model->idAlmacen));
 		}
 
 		$this->render('update',array(

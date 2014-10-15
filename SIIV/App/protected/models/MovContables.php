@@ -4,11 +4,15 @@
  * This is the model class for table "movContables".
  *
  * The followings are the available columns in table 'movContables':
- * @property integer $idmovContables
+ * @property integer $idMovContables
  * @property integer $idEntrada
  * @property integer $idSalida
  * @property string $fechaAlta
- * @property integer $idUsuario
+ * @property string $usuarioCreacion
+ *
+ * The followings are the available model relations:
+ * @property Entrada $idEntrada0
+ * @property Salida $idSalida0
  */
 class MovContables extends CActiveRecord
 {
@@ -28,11 +32,12 @@ class MovContables extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idEntrada, idSalida, idUsuario', 'numerical', 'integerOnly'=>true),
+			array('idEntrada, idSalida', 'numerical', 'integerOnly'=>true),
+			array('usuarioCreacion', 'length', 'max'=>45),
 			array('fechaAlta', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idmovContables, idEntrada, idSalida, fechaAlta, idUsuario', 'safe', 'on'=>'search'),
+			array('idMovContables, idEntrada, idSalida, fechaAlta, usuarioCreacion', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -44,6 +49,8 @@ class MovContables extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'idEntrada0' => array(self::BELONGS_TO, 'Entrada', 'idEntrada'),
+			'idSalida0' => array(self::BELONGS_TO, 'Salida', 'idSalida'),
 		);
 	}
 
@@ -53,11 +60,11 @@ class MovContables extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idmovContables' => 'Idmov Contables',
+			'idMovContables' => 'Id Mov Contables',
 			'idEntrada' => 'Id Entrada',
 			'idSalida' => 'Id Salida',
 			'fechaAlta' => 'Fecha Alta',
-			'idUsuario' => 'Id Usuario',
+			'usuarioCreacion' => 'Usuario Creacion',
 		);
 	}
 
@@ -79,11 +86,11 @@ class MovContables extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('idmovContables',$this->idmovContables);
+		$criteria->compare('idMovContables',$this->idMovContables);
 		$criteria->compare('idEntrada',$this->idEntrada);
 		$criteria->compare('idSalida',$this->idSalida);
 		$criteria->compare('fechaAlta',$this->fechaAlta,true);
-		$criteria->compare('idUsuario',$this->idUsuario);
+		$criteria->compare('usuarioCreacion',$this->usuarioCreacion,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

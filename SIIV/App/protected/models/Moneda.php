@@ -4,10 +4,10 @@
  * This is the model class for table "moneda".
  *
  * The followings are the available columns in table 'moneda':
- * @property integer $idmoneda
- * @property string $nombreMoneda
+ * @property integer $idMoneda
+ * @property string $nombre
  * @property string $fechaAlta
- * @property integer $idUsuario
+ * @property string $usuarioCreacion
  */
 class Moneda extends CActiveRecord
 {
@@ -27,12 +27,11 @@ class Moneda extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idUsuario', 'numerical', 'integerOnly'=>true),
-			array('nombreMoneda', 'length', 'max'=>45),
+			array('nombre, usuarioCreacion', 'length', 'max'=>45),
 			array('fechaAlta', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idmoneda, nombreMoneda, fechaAlta, idUsuario', 'safe', 'on'=>'search'),
+			array('idMoneda, nombre, fechaAlta, usuarioCreacion', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -53,10 +52,10 @@ class Moneda extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idmoneda' => 'Idmoneda',
-			'nombreMoneda' => 'Nombre Moneda',
+			'idMoneda' => 'Id Moneda',
+			'nombre' => 'Nombre',
 			'fechaAlta' => 'Fecha Alta',
-			'idUsuario' => 'Id Usuario',
+			'usuarioCreacion' => 'Usuario Creacion',
 		);
 	}
 
@@ -78,10 +77,10 @@ class Moneda extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('idmoneda',$this->idmoneda);
-		$criteria->compare('nombreMoneda',$this->nombreMoneda,true);
+		$criteria->compare('idMoneda',$this->idMoneda);
+		$criteria->compare('nombre',$this->nombre,true);
 		$criteria->compare('fechaAlta',$this->fechaAlta,true);
-		$criteria->compare('idUsuario',$this->idUsuario);
+		$criteria->compare('usuarioCreacion',$this->usuarioCreacion,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

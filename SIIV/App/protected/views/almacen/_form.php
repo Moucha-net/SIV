@@ -20,9 +20,9 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'nombreAlmacen'); ?>
-		<?php echo $form->textField($model,'nombreAlmacen',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'nombreAlmacen'); ?>
+		<?php echo $form->labelEx($model,'nombre'); ?>
+		<?php echo $form->textField($model,'nombre',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($model,'nombre'); ?>
 	</div>
 
 	<div class="row">
@@ -51,7 +51,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'tiempoEntrega'); ?>
-		<?php echo $form->textField($model,'tiempoEntrega',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->textField($model,'tiempoEntrega'); ?>
 		<?php echo $form->error($model,'tiempoEntrega'); ?>
 	</div>
 
@@ -62,9 +62,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'idUsuario'); ?>
-		<?php echo $form->textField($model,'idUsuario'); ?>
-		<?php echo $form->error($model,'idUsuario'); ?>
+		<?php echo $form->labelEx($model,'usuarioCreacion'); ?>
+		<?php echo $form->textField($model,'usuarioCreacion',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($model,'usuarioCreacion'); ?>
 	</div>
 
 	<div class="row buttons">

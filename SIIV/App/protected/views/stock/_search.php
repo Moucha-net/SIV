@@ -12,8 +12,8 @@
 )); ?>
 
 	<div class="row">
-		<?php echo $form->label($model,'idstock'); ?>
-		<?php echo $form->textField($model,'idstock'); ?>
+		<?php echo $form->label($model,'idStock'); ?>
+		<?php echo $form->textField($model,'idStock'); ?>
 	</div>
 
 	<div class="row">
@@ -27,18 +27,13 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'idEntrada'); ?>
-		<?php echo $form->textField($model,'idEntrada'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'cantidadProducto'); ?>
 		<?php echo $form->textField($model,'cantidadProducto'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'productomin'); ?>
-		<?php echo $form->textField($model,'productomin'); ?>
+		<?php echo $form->label($model,'productoMin'); ?>
+		<?php echo $form->textField($model,'productoMin'); ?>
 	</div>
 
 	<div class="row">
@@ -47,8 +42,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'idUsuario'); ?>
-		<?php echo $form->textField($model,'idUsuario'); ?>
+		<?php echo $form->label($model,'usuarioCreacion'); ?>
+		<?php echo $form->textField($model,'usuarioCreacion',array('size'=>45,'maxlength'=>45)); ?>
 	</div>
 
 	<div class="row buttons">

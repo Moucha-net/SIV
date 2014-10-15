@@ -5,12 +5,8 @@
 
 <div class="view">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('idcomprobante')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->idcomprobante), array('view', 'id'=>$data->idcomprobante)); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('idSalida')); ?>:</b>
-	<?php echo CHtml::encode($data->idSalida); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('idComprobante')); ?>:</b>
+	<?php echo CHtml::link(CHtml::encode($data->idComprobante), array('view', 'id'=>$data->idComprobante)); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('descripcion')); ?>:</b>
@@ -21,8 +17,8 @@
 	<?php echo CHtml::encode($data->fechaAlta); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('idUsuario')); ?>:</b>
-	<?php echo CHtml::encode($data->idUsuario); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('usuarioCreacion')); ?>:</b>
+	<?php echo CHtml::encode($data->usuarioCreacion); ?>
 	<br />
 
 

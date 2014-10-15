@@ -1,6 +1,6 @@
 <?php
 
-class UsuariosController extends Controller
+class IntermediarioController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -62,16 +62,16 @@ class UsuariosController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Usuarios;
+		$model=new Intermediario;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Usuarios']))
+		if(isset($_POST['Intermediario']))
 		{
-			$model->attributes=$_POST['Usuarios'];
+			$model->attributes=$_POST['Intermediario'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idusuario));
+				$this->redirect(array('view','id'=>$model->idIntermediario));
 		}
 
 		$this->render('create',array(
@@ -91,11 +91,11 @@ class UsuariosController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Usuarios']))
+		if(isset($_POST['Intermediario']))
 		{
-			$model->attributes=$_POST['Usuarios'];
+			$model->attributes=$_POST['Intermediario'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idusuario));
+				$this->redirect(array('view','id'=>$model->idIntermediario));
 		}
 
 		$this->render('update',array(
@@ -122,7 +122,7 @@ class UsuariosController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Usuarios');
+		$dataProvider=new CActiveDataProvider('Intermediario');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -133,10 +133,10 @@ class UsuariosController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Usuarios('search');
+		$model=new Intermediario('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Usuarios']))
-			$model->attributes=$_GET['Usuarios'];
+		if(isset($_GET['Intermediario']))
+			$model->attributes=$_GET['Intermediario'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -147,12 +147,12 @@ class UsuariosController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Usuarios the loaded model
+	 * @return Intermediario the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Usuarios::model()->findByPk($id);
+		$model=Intermediario::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -160,11 +160,11 @@ class UsuariosController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Usuarios $model the model to be validated
+	 * @param Intermediario $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='usuarios-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='intermediario-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

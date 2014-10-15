@@ -4,10 +4,13 @@
  * This is the model class for table "familia".
  *
  * The followings are the available columns in table 'familia':
- * @property integer $idfamilia
- * @property string $nombreFamilia
+ * @property integer $idFamilia
+ * @property string $nombre
  * @property string $fechaAlta
- * @property integer $idUsuario
+ * @property string $usuarioCreacion
+ *
+ * The followings are the available model relations:
+ * @property Producto[] $productos
  */
 class Familia extends CActiveRecord
 {
@@ -27,12 +30,11 @@ class Familia extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idUsuario', 'numerical', 'integerOnly'=>true),
-			array('nombreFamilia', 'length', 'max'=>45),
+			array('nombre, usuarioCreacion', 'length', 'max'=>45),
 			array('fechaAlta', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idfamilia, nombreFamilia, fechaAlta, idUsuario', 'safe', 'on'=>'search'),
+			array('idFamilia, nombre, fechaAlta, usuarioCreacion', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -44,6 +46,7 @@ class Familia extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'productos' => array(self::HAS_MANY, 'Producto', 'idFamilia'),
 		);
 	}
 
@@ -53,10 +56,10 @@ class Familia extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idfamilia' => 'Idfamilia',
-			'nombreFamilia' => 'Nombre Familia',
+			'idFamilia' => 'Id Familia',
+			'nombre' => 'Nombre',
 			'fechaAlta' => 'Fecha Alta',
-			'idUsuario' => 'Id Usuario',
+			'usuarioCreacion' => 'Usuario Creacion',
 		);
 	}
 
@@ -78,10 +81,10 @@ class Familia extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('idfamilia',$this->idfamilia);
-		$criteria->compare('nombreFamilia',$this->nombreFamilia,true);
+		$criteria->compare('idFamilia',$this->idFamilia);
+		$criteria->compare('nombre',$this->nombre,true);
 		$criteria->compare('fechaAlta',$this->fechaAlta,true);
-		$criteria->compare('idUsuario',$this->idUsuario);
+		$criteria->compare('usuarioCreacion',$this->usuarioCreacion,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

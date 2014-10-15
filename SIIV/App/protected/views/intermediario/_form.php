@@ -1,13 +1,13 @@
 <?php
-/* @var $this UsuariosController */
-/* @var $model Usuarios */
+/* @var $this IntermediarioController */
+/* @var $model Intermediario */
 /* @var $form CActiveForm */
 ?>
 
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'usuarios-form',
+	'id'=>'intermediario-form',
 	// Please note: When you enable ajax validation, make sure the corresponding
 	// controller action is handling ajax validation correctly.
 	// There is a call to performAjaxValidation() commented in generated controller code.
@@ -26,21 +26,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'aPaterno'); ?>
-		<?php echo $form->textField($model,'aPaterno',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'aPaterno'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'aMaterno'); ?>
-		<?php echo $form->textField($model,'aMaterno',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'aMaterno'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'correo'); ?>
-		<?php echo $form->textField($model,'correo',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'correo'); ?>
+		<?php echo $form->labelEx($model,'direccion'); ?>
+		<?php echo $form->textField($model,'direccion',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($model,'direccion'); ?>
 	</div>
 
 	<div class="row">
@@ -50,21 +38,15 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'userName'); ?>
-		<?php echo $form->textField($model,'userName',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'userName'); ?>
+		<?php echo $form->labelEx($model,'correo'); ?>
+		<?php echo $form->textField($model,'correo',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($model,'correo'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'contrasena'); ?>
-		<?php echo $form->textField($model,'contrasena',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'contrasena'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'idRol'); ?>
-		<?php echo $form->textField($model,'idRol'); ?>
-		<?php echo $form->error($model,'idRol'); ?>
+		<?php echo $form->labelEx($model,'descripcion'); ?>
+		<?php echo $form->textField($model,'descripcion',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($model,'descripcion'); ?>
 	</div>
 
 	<div class="row">
@@ -74,9 +56,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'idUsuarioGen'); ?>
-		<?php echo $form->textField($model,'idUsuarioGen',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'idUsuarioGen'); ?>
+		<?php echo $form->labelEx($model,'usuarioCreacion'); ?>
+		<?php echo $form->textField($model,'usuarioCreacion',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($model,'usuarioCreacion'); ?>
 	</div>
 
 	<div class="row buttons">

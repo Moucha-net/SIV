@@ -4,8 +4,8 @@
  * This is the model class for table "producto".
  *
  * The followings are the available columns in table 'producto':
- * @property integer $idproducto
- * @property string $nombreProducto
+ * @property integer $idProducto
+ * @property string $nombre
  * @property string $descripcion
  * @property string $tipo
  * @property string $modelo
@@ -13,7 +13,12 @@
  * @property string $año
  * @property integer $activo
  * @property string $fechaAlta
- * @property integer $idUsuario
+ * @property string $idUsuario
+ * @property integer $idFamilia
+ *
+ * The followings are the available model relations:
+ * @property Familia $idFamilia0
+ * @property Stock[] $stocks
  */
 class Producto extends CActiveRecord
 {
@@ -33,12 +38,12 @@ class Producto extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('activo, idUsuario', 'numerical', 'integerOnly'=>true),
-			array('nombreProducto, descripcion, tipo, modelo, marca, año', 'length', 'max'=>45),
+			array('activo, idFamilia', 'numerical', 'integerOnly'=>true),
+			array('nombre, descripcion, tipo, modelo, marca, año, idUsuario', 'length', 'max'=>45),
 			array('fechaAlta', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idproducto, nombreProducto, descripcion, tipo, modelo, marca, año, activo, fechaAlta, idUsuario', 'safe', 'on'=>'search'),
+			array('idProducto, nombre, descripcion, tipo, modelo, marca, año, activo, fechaAlta, idUsuario, idFamilia', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -50,6 +55,8 @@ class Producto extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'idFamilia0' => array(self::BELONGS_TO, 'Familia', 'idFamilia'),
+			'stocks' => array(self::HAS_MANY, 'Stock', 'idProducto'),
 		);
 	}
 
@@ -59,8 +66,8 @@ class Producto extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idproducto' => 'Idproducto',
-			'nombreProducto' => 'Nombre Producto',
+			'idProducto' => 'Id Producto',
+			'nombre' => 'Nombre',
 			'descripcion' => 'Descripcion',
 			'tipo' => 'Tipo',
 			'modelo' => 'Modelo',
@@ -69,6 +76,7 @@ class Producto extends CActiveRecord
 			'activo' => 'Activo',
 			'fechaAlta' => 'Fecha Alta',
 			'idUsuario' => 'Id Usuario',
+			'idFamilia' => 'Id Familia',
 		);
 	}
 
@@ -90,8 +98,8 @@ class Producto extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('idproducto',$this->idproducto);
-		$criteria->compare('nombreProducto',$this->nombreProducto,true);
+		$criteria->compare('idProducto',$this->idProducto);
+		$criteria->compare('nombre',$this->nombre,true);
 		$criteria->compare('descripcion',$this->descripcion,true);
 		$criteria->compare('tipo',$this->tipo,true);
 		$criteria->compare('modelo',$this->modelo,true);
@@ -99,7 +107,8 @@ class Producto extends CActiveRecord
 		$criteria->compare('año',$this->año,true);
 		$criteria->compare('activo',$this->activo);
 		$criteria->compare('fechaAlta',$this->fechaAlta,true);
-		$criteria->compare('idUsuario',$this->idUsuario);
+		$criteria->compare('idUsuario',$this->idUsuario,true);
+		$criteria->compare('idFamilia',$this->idFamilia);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

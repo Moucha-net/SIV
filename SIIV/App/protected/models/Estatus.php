@@ -4,10 +4,14 @@
  * This is the model class for table "estatus".
  *
  * The followings are the available columns in table 'estatus':
- * @property integer $idestatus
- * @property string $nombreEstatus
+ * @property integer $idEstatus
+ * @property string $nombre
  * @property string $fechaAlta
- * @property integer $idUsuario
+ * @property string $usuarioCreacion
+ *
+ * The followings are the available model relations:
+ * @property Entrada[] $entradas
+ * @property Salida[] $salidas
  */
 class Estatus extends CActiveRecord
 {
@@ -27,12 +31,11 @@ class Estatus extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idUsuario', 'numerical', 'integerOnly'=>true),
-			array('nombreEstatus', 'length', 'max'=>45),
+			array('nombre, usuarioCreacion', 'length', 'max'=>45),
 			array('fechaAlta', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idestatus, nombreEstatus, fechaAlta, idUsuario', 'safe', 'on'=>'search'),
+			array('idEstatus, nombre, fechaAlta, usuarioCreacion', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -44,6 +47,8 @@ class Estatus extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'entradas' => array(self::HAS_MANY, 'Entrada', 'idEstatus'),
+			'salidas' => array(self::HAS_MANY, 'Salida', 'idEstatus'),
 		);
 	}
 
@@ -53,10 +58,10 @@ class Estatus extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idestatus' => 'Idestatus',
-			'nombreEstatus' => 'Nombre Estatus',
+			'idEstatus' => 'Id Estatus',
+			'nombre' => 'Nombre',
 			'fechaAlta' => 'Fecha Alta',
-			'idUsuario' => 'Id Usuario',
+			'usuarioCreacion' => 'Usuario Creacion',
 		);
 	}
 
@@ -78,10 +83,10 @@ class Estatus extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('idestatus',$this->idestatus);
-		$criteria->compare('nombreEstatus',$this->nombreEstatus,true);
+		$criteria->compare('idEstatus',$this->idEstatus);
+		$criteria->compare('nombre',$this->nombre,true);
 		$criteria->compare('fechaAlta',$this->fechaAlta,true);
-		$criteria->compare('idUsuario',$this->idUsuario);
+		$criteria->compare('usuarioCreacion',$this->usuarioCreacion,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

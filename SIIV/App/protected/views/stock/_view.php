@@ -5,8 +5,8 @@
 
 <div class="view">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('idstock')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->idstock), array('view', 'id'=>$data->idstock)); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('idStock')); ?>:</b>
+	<?php echo CHtml::link(CHtml::encode($data->idStock), array('view', 'id'=>$data->idStock)); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('idProducto')); ?>:</b>
@@ -17,27 +17,21 @@
 	<?php echo CHtml::encode($data->idAlmacen); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('idEntrada')); ?>:</b>
-	<?php echo CHtml::encode($data->idEntrada); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('cantidadProducto')); ?>:</b>
 	<?php echo CHtml::encode($data->cantidadProducto); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('productomin')); ?>:</b>
-	<?php echo CHtml::encode($data->productomin); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('productoMin')); ?>:</b>
+	<?php echo CHtml::encode($data->productoMin); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('fechaAlta')); ?>:</b>
 	<?php echo CHtml::encode($data->fechaAlta); ?>
 	<br />
 
-	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('idUsuario')); ?>:</b>
-	<?php echo CHtml::encode($data->idUsuario); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('usuarioCreacion')); ?>:</b>
+	<?php echo CHtml::encode($data->usuarioCreacion); ?>
 	<br />
 
-	*/ ?>
 
 </div>

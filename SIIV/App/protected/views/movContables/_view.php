@@ -5,8 +5,8 @@
 
 <div class="view">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('idmovContables')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->idmovContables), array('view', 'id'=>$data->idmovContables)); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('idMovContables')); ?>:</b>
+	<?php echo CHtml::link(CHtml::encode($data->idMovContables), array('view', 'id'=>$data->idMovContables)); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('idEntrada')); ?>:</b>
@@ -21,8 +21,8 @@
 	<?php echo CHtml::encode($data->fechaAlta); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('idUsuario')); ?>:</b>
-	<?php echo CHtml::encode($data->idUsuario); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('usuarioCreacion')); ?>:</b>
+	<?php echo CHtml::encode($data->usuarioCreacion); ?>
 	<br />
 
 

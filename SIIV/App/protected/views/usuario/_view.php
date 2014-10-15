@@ -1,12 +1,12 @@
 <?php
-/* @var $this UsuariosController */
-/* @var $data Usuarios */
+/* @var $this UsuarioController */
+/* @var $data Usuario */
 ?>
 
 <div class="view">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('idusuario')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->idusuario), array('view', 'id'=>$data->idusuario)); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('idUsuario')); ?>:</b>
+	<?php echo CHtml::link(CHtml::encode($data->idUsuario), array('view', 'id'=>$data->idUsuario)); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('nombre')); ?>:</b>
@@ -34,8 +34,8 @@
 	<br />
 
 	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('contrasena')); ?>:</b>
-	<?php echo CHtml::encode($data->contrasena); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('password')); ?>:</b>
+	<?php echo CHtml::encode($data->password); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('idRol')); ?>:</b>
@@ -46,8 +46,8 @@
 	<?php echo CHtml::encode($data->fechaAlta); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('idUsuarioGen')); ?>:</b>
-	<?php echo CHtml::encode($data->idUsuarioGen); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('usuarioCreacion')); ?>:</b>
+	<?php echo CHtml::encode($data->usuarioCreacion); ?>
 	<br />
 
 	*/ ?>

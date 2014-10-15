@@ -71,7 +71,7 @@ class ComprobanteController extends Controller
 		{
 			$model->attributes=$_POST['Comprobante'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idcomprobante));
+				$this->redirect(array('view','id'=>$model->idComprobante));
 		}
 
 		$this->render('create',array(
@@ -95,7 +95,7 @@ class ComprobanteController extends Controller
 		{
 			$model->attributes=$_POST['Comprobante'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idcomprobante));
+				$this->redirect(array('view','id'=>$model->idComprobante));
 		}
 
 		$this->render('update',array(

@@ -12,8 +12,8 @@
 )); ?>
 
 	<div class="row">
-		<?php echo $form->label($model,'idmovContables'); ?>
-		<?php echo $form->textField($model,'idmovContables'); ?>
+		<?php echo $form->label($model,'idMovContables'); ?>
+		<?php echo $form->textField($model,'idMovContables'); ?>
 	</div>
 
 	<div class="row">
@@ -32,8 +32,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'idUsuario'); ?>
-		<?php echo $form->textField($model,'idUsuario'); ?>
+		<?php echo $form->label($model,'usuarioCreacion'); ?>
+		<?php echo $form->textField($model,'usuarioCreacion',array('size'=>45,'maxlength'=>45)); ?>
 	</div>
 
 	<div class="row buttons">

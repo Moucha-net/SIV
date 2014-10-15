@@ -26,12 +26,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'idProducto'); ?>
-		<?php echo $form->textField($model,'idProducto'); ?>
-		<?php echo $form->error($model,'idProducto'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'fecha'); ?>
 		<?php echo $form->textField($model,'fecha'); ?>
 		<?php echo $form->error($model,'fecha'); ?>
@@ -68,9 +62,21 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'idUsuario'); ?>
-		<?php echo $form->textField($model,'idUsuario'); ?>
-		<?php echo $form->error($model,'idUsuario'); ?>
+		<?php echo $form->labelEx($model,'usuarioCreacion'); ?>
+		<?php echo $form->textField($model,'usuarioCreacion',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($model,'usuarioCreacion'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'idStock'); ?>
+		<?php echo $form->textField($model,'idStock'); ?>
+		<?php echo $form->error($model,'idStock'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'idEstatus'); ?>
+		<?php echo $form->textField($model,'idEstatus'); ?>
+		<?php echo $form->error($model,'idEstatus'); ?>
 	</div>
 
 	<div class="row buttons">

@@ -71,7 +71,7 @@ class EntradaController extends Controller
 		{
 			$model->attributes=$_POST['Entrada'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->identrada));
+				$this->redirect(array('view','id'=>$model->idEntrada));
 		}
 
 		$this->render('create',array(
@@ -95,7 +95,7 @@ class EntradaController extends Controller
 		{
 			$model->attributes=$_POST['Entrada'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->identrada));
+				$this->redirect(array('view','id'=>$model->idEntrada));
 		}
 
 		$this->render('update',array(

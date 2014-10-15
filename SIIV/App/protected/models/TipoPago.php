@@ -4,10 +4,10 @@
  * This is the model class for table "tipoPago".
  *
  * The followings are the available columns in table 'tipoPago':
- * @property integer $idtipoPago
- * @property string $nombreTipoPago
+ * @property integer $idTipoPago
+ * @property string $nombre
  * @property string $fechaAlta
- * @property integer $idUsuario
+ * @property string $usuarioCreacion
  */
 class TipoPago extends CActiveRecord
 {
@@ -27,12 +27,11 @@ class TipoPago extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idUsuario', 'numerical', 'integerOnly'=>true),
-			array('nombreTipoPago', 'length', 'max'=>45),
+			array('nombre, usuarioCreacion', 'length', 'max'=>45),
 			array('fechaAlta', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idtipoPago, nombreTipoPago, fechaAlta, idUsuario', 'safe', 'on'=>'search'),
+			array('idTipoPago, nombre, fechaAlta, usuarioCreacion', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -53,10 +52,10 @@ class TipoPago extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idtipoPago' => 'Idtipo Pago',
-			'nombreTipoPago' => 'Nombre Tipo Pago',
+			'idTipoPago' => 'Id Tipo Pago',
+			'nombre' => 'Nombre',
 			'fechaAlta' => 'Fecha Alta',
-			'idUsuario' => 'Id Usuario',
+			'usuarioCreacion' => 'Usuario Creacion',
 		);
 	}
 
@@ -78,10 +77,10 @@ class TipoPago extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('idtipoPago',$this->idtipoPago);
-		$criteria->compare('nombreTipoPago',$this->nombreTipoPago,true);
+		$criteria->compare('idTipoPago',$this->idTipoPago);
+		$criteria->compare('nombre',$this->nombre,true);
 		$criteria->compare('fechaAlta',$this->fechaAlta,true);
-		$criteria->compare('idUsuario',$this->idUsuario);
+		$criteria->compare('usuarioCreacion',$this->usuarioCreacion,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

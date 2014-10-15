@@ -4,11 +4,13 @@
  * This is the model class for table "comprobante".
  *
  * The followings are the available columns in table 'comprobante':
- * @property integer $idcomprobante
- * @property integer $idSalida
+ * @property integer $idComprobante
  * @property string $descripcion
  * @property string $fechaAlta
- * @property integer $idUsuario
+ * @property string $usuarioCreacion
+ *
+ * The followings are the available model relations:
+ * @property Salida[] $salidas
  */
 class Comprobante extends CActiveRecord
 {
@@ -28,12 +30,11 @@ class Comprobante extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idSalida, idUsuario', 'numerical', 'integerOnly'=>true),
-			array('descripcion', 'length', 'max'=>45),
+			array('descripcion, usuarioCreacion', 'length', 'max'=>45),
 			array('fechaAlta', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idcomprobante, idSalida, descripcion, fechaAlta, idUsuario', 'safe', 'on'=>'search'),
+			array('idComprobante, descripcion, fechaAlta, usuarioCreacion', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -45,6 +46,7 @@ class Comprobante extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'salidas' => array(self::HAS_MANY, 'Salida', 'idComprobante'),
 		);
 	}
 
@@ -54,11 +56,10 @@ class Comprobante extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idcomprobante' => 'Idcomprobante',
-			'idSalida' => 'Id Salida',
+			'idComprobante' => 'Id Comprobante',
 			'descripcion' => 'Descripcion',
 			'fechaAlta' => 'Fecha Alta',
-			'idUsuario' => 'Id Usuario',
+			'usuarioCreacion' => 'Usuario Creacion',
 		);
 	}
 
@@ -80,11 +81,10 @@ class Comprobante extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('idcomprobante',$this->idcomprobante);
-		$criteria->compare('idSalida',$this->idSalida);
+		$criteria->compare('idComprobante',$this->idComprobante);
 		$criteria->compare('descripcion',$this->descripcion,true);
 		$criteria->compare('fechaAlta',$this->fechaAlta,true);
-		$criteria->compare('idUsuario',$this->idUsuario);
+		$criteria->compare('usuarioCreacion',$this->usuarioCreacion,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

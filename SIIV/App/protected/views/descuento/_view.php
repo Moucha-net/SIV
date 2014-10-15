@@ -5,12 +5,12 @@
 
 <div class="view">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('iddescuento')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->iddescuento), array('view', 'id'=>$data->iddescuento)); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('idDescuento')); ?>:</b>
+	<?php echo CHtml::link(CHtml::encode($data->idDescuento), array('view', 'id'=>$data->idDescuento)); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('nombreDescuento')); ?>:</b>
-	<?php echo CHtml::encode($data->nombreDescuento); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('nombre')); ?>:</b>
+	<?php echo CHtml::encode($data->nombre); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('descripcion')); ?>:</b>
@@ -25,8 +25,8 @@
 	<?php echo CHtml::encode($data->fechaAlta); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('idUsuario')); ?>:</b>
-	<?php echo CHtml::encode($data->idUsuario); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('usuarioCreacion')); ?>:</b>
+	<?php echo CHtml::encode($data->usuarioCreacion); ?>
 	<br />
 
 

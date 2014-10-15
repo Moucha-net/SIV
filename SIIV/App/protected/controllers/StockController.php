@@ -71,7 +71,7 @@ class StockController extends Controller
 		{
 			$model->attributes=$_POST['Stock'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idstock));
+				$this->redirect(array('view','id'=>$model->idStock));
 		}
 
 		$this->render('create',array(
@@ -95,7 +95,7 @@ class StockController extends Controller
 		{
 			$model->attributes=$_POST['Stock'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idstock));
+				$this->redirect(array('view','id'=>$model->idStock));
 		}
 
 		$this->render('update',array(

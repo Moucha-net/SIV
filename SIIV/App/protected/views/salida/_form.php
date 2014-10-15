@@ -20,15 +20,15 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'idIntermediario'); ?>
-		<?php echo $form->textField($model,'idIntermediario'); ?>
-		<?php echo $form->error($model,'idIntermediario'); ?>
+		<?php echo $form->labelEx($model,'idSalida'); ?>
+		<?php echo $form->textField($model,'idSalida'); ?>
+		<?php echo $form->error($model,'idSalida'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'idProducto'); ?>
-		<?php echo $form->textField($model,'idProducto'); ?>
-		<?php echo $form->error($model,'idProducto'); ?>
+		<?php echo $form->labelEx($model,'idIntermediario'); ?>
+		<?php echo $form->textField($model,'idIntermediario'); ?>
+		<?php echo $form->error($model,'idIntermediario'); ?>
 	</div>
 
 	<div class="row">
@@ -56,9 +56,33 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'idUsuario'); ?>
-		<?php echo $form->textField($model,'idUsuario'); ?>
-		<?php echo $form->error($model,'idUsuario'); ?>
+		<?php echo $form->labelEx($model,'usuarioCreacion'); ?>
+		<?php echo $form->textField($model,'usuarioCreacion',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($model,'usuarioCreacion'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'idDescuento'); ?>
+		<?php echo $form->textField($model,'idDescuento'); ?>
+		<?php echo $form->error($model,'idDescuento'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'idComprobante'); ?>
+		<?php echo $form->textField($model,'idComprobante'); ?>
+		<?php echo $form->error($model,'idComprobante'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'idStock'); ?>
+		<?php echo $form->textField($model,'idStock'); ?>
+		<?php echo $form->error($model,'idStock'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'idEstatus'); ?>
+		<?php echo $form->textField($model,'idEstatus'); ?>
+		<?php echo $form->error($model,'idEstatus'); ?>
 	</div>
 
 	<div class="row buttons">

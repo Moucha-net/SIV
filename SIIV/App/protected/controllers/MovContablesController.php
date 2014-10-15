@@ -71,7 +71,7 @@ class MovContablesController extends Controller
 		{
 			$model->attributes=$_POST['MovContables'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idmovContables));
+				$this->redirect(array('view','id'=>$model->idMovContables));
 		}
 
 		$this->render('create',array(
@@ -95,7 +95,7 @@ class MovContablesController extends Controller
 		{
 			$model->attributes=$_POST['MovContables'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idmovContables));
+				$this->redirect(array('view','id'=>$model->idMovContables));
 		}
 
 		$this->render('update',array(

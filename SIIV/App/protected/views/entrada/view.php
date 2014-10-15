@@ -4,32 +4,33 @@
 
 $this->breadcrumbs=array(
 	'Entradas'=>array('index'),
-	$model->identrada,
+	$model->idEntrada,
 );
 
 $this->menu=array(
 	array('label'=>'List Entrada', 'url'=>array('index')),
 	array('label'=>'Create Entrada', 'url'=>array('create')),
-	array('label'=>'Update Entrada', 'url'=>array('update', 'id'=>$model->identrada)),
-	array('label'=>'Delete Entrada', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->identrada),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Update Entrada', 'url'=>array('update', 'id'=>$model->idEntrada)),
+	array('label'=>'Delete Entrada', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->idEntrada),'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>'Manage Entrada', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View Entrada #<?php echo $model->identrada; ?></h1>
+<h1>View Entrada #<?php echo $model->idEntrada; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		'identrada',
+		'idEntrada',
 		'idIntermediario',
-		'idProducto',
 		'fecha',
 		'hora',
 		'observaciones',
 		'cantidadEntrada',
 		'totalEntrada',
 		'fechaAlta',
-		'idUsuario',
+		'usuarioCreacion',
+		'idStock',
+		'idEstatus',
 	),
 )); ?>

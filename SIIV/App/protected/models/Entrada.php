@@ -4,16 +4,23 @@
  * This is the model class for table "entrada".
  *
  * The followings are the available columns in table 'entrada':
- * @property integer $identrada
+ * @property integer $idEntrada
  * @property integer $idIntermediario
- * @property integer $idProducto
  * @property string $fecha
  * @property string $hora
  * @property string $observaciones
  * @property string $cantidadEntrada
  * @property double $totalEntrada
  * @property string $fechaAlta
- * @property integer $idUsuario
+ * @property string $usuarioCreacion
+ * @property integer $idStock
+ * @property integer $idEstatus
+ *
+ * The followings are the available model relations:
+ * @property Intermediario $idIntermediario0
+ * @property Stock $idStock0
+ * @property Estatus $idEstatus0
+ * @property MovContables[] $movContables
  */
 class Entrada extends CActiveRecord
 {
@@ -33,14 +40,14 @@ class Entrada extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idIntermediario, idProducto, idUsuario', 'numerical', 'integerOnly'=>true),
+			array('idIntermediario, idStock, idEstatus', 'numerical', 'integerOnly'=>true),
 			array('totalEntrada', 'numerical'),
 			array('hora', 'length', 'max'=>5),
-			array('observaciones, cantidadEntrada', 'length', 'max'=>45),
+			array('observaciones, cantidadEntrada, usuarioCreacion', 'length', 'max'=>45),
 			array('fecha, fechaAlta', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('identrada, idIntermediario, idProducto, fecha, hora, observaciones, cantidadEntrada, totalEntrada, fechaAlta, idUsuario', 'safe', 'on'=>'search'),
+			array('idEntrada, idIntermediario, fecha, hora, observaciones, cantidadEntrada, totalEntrada, fechaAlta, usuarioCreacion, idStock, idEstatus', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -52,6 +59,10 @@ class Entrada extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'idIntermediario0' => array(self::BELONGS_TO, 'Intermediario', 'idIntermediario'),
+			'idStock0' => array(self::BELONGS_TO, 'Stock', 'idStock'),
+			'idEstatus0' => array(self::BELONGS_TO, 'Estatus', 'idEstatus'),
+			'movContables' => array(self::HAS_MANY, 'MovContables', 'idEntrada'),
 		);
 	}
 
@@ -61,16 +72,17 @@ class Entrada extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'identrada' => 'Identrada',
+			'idEntrada' => 'Id Entrada',
 			'idIntermediario' => 'Id Intermediario',
-			'idProducto' => 'Id Producto',
 			'fecha' => 'Fecha',
 			'hora' => 'Hora',
 			'observaciones' => 'Observaciones',
 			'cantidadEntrada' => 'Cantidad Entrada',
 			'totalEntrada' => 'Total Entrada',
 			'fechaAlta' => 'Fecha Alta',
-			'idUsuario' => 'Id Usuario',
+			'usuarioCreacion' => 'Usuario Creacion',
+			'idStock' => 'Id Stock',
+			'idEstatus' => 'Id Estatus',
 		);
 	}
 
@@ -92,16 +104,17 @@ class Entrada extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('identrada',$this->identrada);
+		$criteria->compare('idEntrada',$this->idEntrada);
 		$criteria->compare('idIntermediario',$this->idIntermediario);
-		$criteria->compare('idProducto',$this->idProducto);
 		$criteria->compare('fecha',$this->fecha,true);
 		$criteria->compare('hora',$this->hora,true);
 		$criteria->compare('observaciones',$this->observaciones,true);
 		$criteria->compare('cantidadEntrada',$this->cantidadEntrada,true);
 		$criteria->compare('totalEntrada',$this->totalEntrada);
 		$criteria->compare('fechaAlta',$this->fechaAlta,true);
-		$criteria->compare('idUsuario',$this->idUsuario);
+		$criteria->compare('usuarioCreacion',$this->usuarioCreacion,true);
+		$criteria->compare('idStock',$this->idStock);
+		$criteria->compare('idEstatus',$this->idEstatus);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -71,7 +71,7 @@ class SalidaController extends Controller
 		{
 			$model->attributes=$_POST['Salida'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idsalida));
+				$this->redirect(array('view','id'=>$model->idSalida));
 		}
 
 		$this->render('create',array(
@@ -95,7 +95,7 @@ class SalidaController extends Controller
 		{
 			$model->attributes=$_POST['Salida'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idsalida));
+				$this->redirect(array('view','id'=>$model->idSalida));
 		}
 
 		$this->render('update',array(

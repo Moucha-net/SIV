@@ -5,12 +5,12 @@
 
 <div class="view">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('idproducto')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->idproducto), array('view', 'id'=>$data->idproducto)); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('idProducto')); ?>:</b>
+	<?php echo CHtml::link(CHtml::encode($data->idProducto), array('view', 'id'=>$data->idProducto)); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('nombreProducto')); ?>:</b>
-	<?php echo CHtml::encode($data->nombreProducto); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('nombre')); ?>:</b>
+	<?php echo CHtml::encode($data->nombre); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('descripcion')); ?>:</b>
@@ -44,6 +44,10 @@
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('idUsuario')); ?>:</b>
 	<?php echo CHtml::encode($data->idUsuario); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('idFamilia')); ?>:</b>
+	<?php echo CHtml::encode($data->idFamilia); ?>
 	<br />
 
 	*/ ?>

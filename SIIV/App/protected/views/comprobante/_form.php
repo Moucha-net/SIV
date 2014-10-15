@@ -20,12 +20,6 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'idSalida'); ?>
-		<?php echo $form->textField($model,'idSalida'); ?>
-		<?php echo $form->error($model,'idSalida'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'descripcion'); ?>
 		<?php echo $form->textField($model,'descripcion',array('size'=>45,'maxlength'=>45)); ?>
 		<?php echo $form->error($model,'descripcion'); ?>
@@ -38,9 +32,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'idUsuario'); ?>
-		<?php echo $form->textField($model,'idUsuario'); ?>
-		<?php echo $form->error($model,'idUsuario'); ?>
+		<?php echo $form->labelEx($model,'usuarioCreacion'); ?>
+		<?php echo $form->textField($model,'usuarioCreacion',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($model,'usuarioCreacion'); ?>
 	</div>
 
 	<div class="row buttons">

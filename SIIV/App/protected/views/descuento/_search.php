@@ -12,13 +12,13 @@
 )); ?>
 
 	<div class="row">
-		<?php echo $form->label($model,'iddescuento'); ?>
-		<?php echo $form->textField($model,'iddescuento'); ?>
+		<?php echo $form->label($model,'idDescuento'); ?>
+		<?php echo $form->textField($model,'idDescuento'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'nombreDescuento'); ?>
-		<?php echo $form->textField($model,'nombreDescuento',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->label($model,'nombre'); ?>
+		<?php echo $form->textField($model,'nombre',array('size'=>45,'maxlength'=>45)); ?>
 	</div>
 
 	<div class="row">
@@ -37,8 +37,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'idUsuario'); ?>
-		<?php echo $form->textField($model,'idUsuario'); ?>
+		<?php echo $form->label($model,'usuarioCreacion'); ?>
+		<?php echo $form->textField($model,'usuarioCreacion',array('size'=>45,'maxlength'=>45)); ?>
 	</div>
 
 	<div class="row buttons">

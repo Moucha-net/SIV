@@ -71,7 +71,7 @@ class ProductoController extends Controller
 		{
 			$model->attributes=$_POST['Producto'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idproducto));
+				$this->redirect(array('view','id'=>$model->idProducto));
 		}
 
 		$this->render('create',array(
@@ -95,7 +95,7 @@ class ProductoController extends Controller
 		{
 			$model->attributes=$_POST['Producto'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idproducto));
+				$this->redirect(array('view','id'=>$model->idProducto));
 		}
 
 		$this->render('update',array(

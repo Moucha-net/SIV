@@ -4,14 +4,25 @@
  * This is the model class for table "salida".
  *
  * The followings are the available columns in table 'salida':
- * @property integer $idsalida
+ * @property integer $idSalida
  * @property integer $idIntermediario
- * @property integer $idProducto
  * @property integer $cantidadSalida
  * @property string $observaciones
  * @property integer $totalSalida
  * @property string $fechaAlta
- * @property integer $idUsuario
+ * @property string $usuarioCreacion
+ * @property integer $idDescuento
+ * @property integer $idComprobante
+ * @property integer $idStock
+ * @property integer $idEstatus
+ *
+ * The followings are the available model relations:
+ * @property MovContables[] $movContables
+ * @property Intermediario $idIntermediario0
+ * @property Stock $idStock0
+ * @property Descuento $idDescuento0
+ * @property Comprobante $idComprobante0
+ * @property Estatus $idEstatus0
  */
 class Salida extends CActiveRecord
 {
@@ -31,12 +42,13 @@ class Salida extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idIntermediario, idProducto, cantidadSalida, totalSalida, idUsuario', 'numerical', 'integerOnly'=>true),
-			array('observaciones', 'length', 'max'=>45),
+			array('idSalida', 'required'),
+			array('idSalida, idIntermediario, cantidadSalida, totalSalida, idDescuento, idComprobante, idStock, idEstatus', 'numerical', 'integerOnly'=>true),
+			array('observaciones, usuarioCreacion', 'length', 'max'=>45),
 			array('fechaAlta', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idsalida, idIntermediario, idProducto, cantidadSalida, observaciones, totalSalida, fechaAlta, idUsuario', 'safe', 'on'=>'search'),
+			array('idSalida, idIntermediario, cantidadSalida, observaciones, totalSalida, fechaAlta, usuarioCreacion, idDescuento, idComprobante, idStock, idEstatus', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -48,6 +60,12 @@ class Salida extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'movContables' => array(self::HAS_MANY, 'MovContables', 'idSalida'),
+			'idIntermediario0' => array(self::BELONGS_TO, 'Intermediario', 'idIntermediario'),
+			'idStock0' => array(self::BELONGS_TO, 'Stock', 'idStock'),
+			'idDescuento0' => array(self::BELONGS_TO, 'Descuento', 'idDescuento'),
+			'idComprobante0' => array(self::BELONGS_TO, 'Comprobante', 'idComprobante'),
+			'idEstatus0' => array(self::BELONGS_TO, 'Estatus', 'idEstatus'),
 		);
 	}
 
@@ -57,14 +75,17 @@ class Salida extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idsalida' => 'Idsalida',
+			'idSalida' => 'Id Salida',
 			'idIntermediario' => 'Id Intermediario',
-			'idProducto' => 'Id Producto',
 			'cantidadSalida' => 'Cantidad Salida',
 			'observaciones' => 'Observaciones',
 			'totalSalida' => 'Total Salida',
 			'fechaAlta' => 'Fecha Alta',
-			'idUsuario' => 'Id Usuario',
+			'usuarioCreacion' => 'Usuario Creacion',
+			'idDescuento' => 'Id Descuento',
+			'idComprobante' => 'Id Comprobante',
+			'idStock' => 'Id Stock',
+			'idEstatus' => 'Id Estatus',
 		);
 	}
 
@@ -86,14 +107,17 @@ class Salida extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('idsalida',$this->idsalida);
+		$criteria->compare('idSalida',$this->idSalida);
 		$criteria->compare('idIntermediario',$this->idIntermediario);
-		$criteria->compare('idProducto',$this->idProducto);
 		$criteria->compare('cantidadSalida',$this->cantidadSalida);
 		$criteria->compare('observaciones',$this->observaciones,true);
 		$criteria->compare('totalSalida',$this->totalSalida);
 		$criteria->compare('fechaAlta',$this->fechaAlta,true);
-		$criteria->compare('idUsuario',$this->idUsuario);
+		$criteria->compare('usuarioCreacion',$this->usuarioCreacion,true);
+		$criteria->compare('idDescuento',$this->idDescuento);
+		$criteria->compare('idComprobante',$this->idComprobante);
+		$criteria->compare('idStock',$this->idStock);
+		$criteria->compare('idEstatus',$this->idEstatus);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -71,7 +71,7 @@ class MonedaController extends Controller
 		{
 			$model->attributes=$_POST['Moneda'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idmoneda));
+				$this->redirect(array('view','id'=>$model->idMoneda));
 		}
 
 		$this->render('create',array(
@@ -95,7 +95,7 @@ class MonedaController extends Controller
 		{
 			$model->attributes=$_POST['Moneda'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idmoneda));
+				$this->redirect(array('view','id'=>$model->idMoneda));
 		}
 
 		$this->render('update',array(

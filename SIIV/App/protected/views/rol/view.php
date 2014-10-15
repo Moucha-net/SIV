@@ -22,8 +22,8 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'idRol',
-		'nombreRol',
+		'nombre',
 		'fechaAlta',
-		'idUsuario',
+		'usuarioCreacion',
 	),
 )); ?>

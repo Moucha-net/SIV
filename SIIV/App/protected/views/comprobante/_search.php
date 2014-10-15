@@ -12,13 +12,8 @@
 )); ?>
 
 	<div class="row">
-		<?php echo $form->label($model,'idcomprobante'); ?>
-		<?php echo $form->textField($model,'idcomprobante'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'idSalida'); ?>
-		<?php echo $form->textField($model,'idSalida'); ?>
+		<?php echo $form->label($model,'idComprobante'); ?>
+		<?php echo $form->textField($model,'idComprobante'); ?>
 	</div>
 
 	<div class="row">
@@ -32,8 +27,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'idUsuario'); ?>
-		<?php echo $form->textField($model,'idUsuario'); ?>
+		<?php echo $form->label($model,'usuarioCreacion'); ?>
+		<?php echo $form->textField($model,'usuarioCreacion',array('size'=>45,'maxlength'=>45)); ?>
 	</div>
 
 	<div class="row buttons">
