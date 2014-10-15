@@ -102,9 +102,12 @@ h6,
   font-size: 18px;
   font-weight:normal;
 }
-
+#sidebar ul#nav li a:hover  {
+  color: #EF3005;
+}
 #sidebar ul#nav li a i {
-  color: #23709A;
+  color: #0C93F5;
+
 }
 
 #sidebar ul#nav ul.sub-menu a:hover {
