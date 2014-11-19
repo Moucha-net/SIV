@@ -133,13 +133,9 @@ class DescuentoController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Descuento('search');
-		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Descuento']))
-			$model->attributes=$_GET['Descuento'];
-
+		$descuento = Descuento::model()->findAll();
 		$this->render('admin',array(
-			'model'=>$model,
+			'descuento'=>$descuento, 
 		));
 	}
 

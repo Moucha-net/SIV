@@ -133,13 +133,9 @@ class EstatusController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Estatus('search');
-		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Estatus']))
-			$model->attributes=$_GET['Estatus'];
-
+		$estatus = Estatus::model()->findAll();
 		$this->render('admin',array(
-			'model'=>$model,
+			'estatus'=>$estatus, 
 		));
 	}
 

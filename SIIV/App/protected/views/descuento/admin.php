@@ -1,58 +1,48 @@
-<?php
-/* @var $this DescuentoController */
-/* @var $model Descuento */
+<!-- Forms -->
+<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/plugins/uniform/jquery.uniform.min.js',CClientScript::POS_END); ?>
+<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/plugins/select2/select2.min.js',CClientScript::POS_END); ?>
 
-$this->breadcrumbs=array(
-	'Descuentos'=>array('index'),
-	'Manage',
-);
+<!-- DataTables -->
+<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/plugins/datatables/jquery.dataTables.min.js',CClientScript::POS_END); ?>
+<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/plugins/datatables/tabletools/TableTools.min.js',CClientScript::POS_END); ?>
+<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/plugins/datatables/colvis/ColVis.min.js',CClientScript::POS_END); ?>
+<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/plugins/datatables/columnfilter/jquery.dataTables.columnFilter.js',CClientScript::POS_END); ?>
+<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/plugins/datatables/DT_bootstrap.js',CClientScript::POS_END); ?>
 
-$this->menu=array(
-	array('label'=>'List Descuento', 'url'=>array('index')),
-	array('label'=>'Create Descuento', 'url'=>array('create')),
-);
+<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/assets/custom/descuento/admin.js',CClientScript::POS_END); ?>
+<?php Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/assets/custom/descuento/admin.css',CClientScript::POS_END); ?>
 
-Yii::app()->clientScript->registerScript('search', "
-$('.search-button').click(function(){
-	$('.search-form').toggle();
-	return false;
-});
-$('.search-form form').submit(function(){
-	$('#descuento-grid').yiiGridView('update', {
-		data: $(this).serialize()
-	});
-	return false;
-});
-");
+<!-- Breadcrumbs line -->
+<div class="crumbs">
+	<ul id="breadcrumbs" class="breadcrumb">
+		<li>
+			<i class="icon-home"></i>
+			<a href="<?php echo Yii::app()->baseUrl; ?>/descuento/admin">Descuento</a>
+		</li>
+	</ul>
+</div>
+<!-- /Breadcrumbs line -->
+
+<h1>Administración de Descuento</h1>
+
+<div class="form-group">
+<div class="row">
+<div class="input-group col-md-4">
+	<input type="text" placeholder="Filtro general"  id="table_filter" class="form-control" type="text" aria-controls="DataTables_Table_0"/>
+	<span class="input-group-addon">
+		<i class="icon-search"></i>
+	</span>
+</div>
+</div>
+</div>
+
+<?php 
+    $this->widget('ext.gridMelon.MelonGrid',array(
+            'modelo'=>$descuento, 
+            'columnas'=>['idDescuento','Descuento','Descripción','Porcentaje','idDescuento'],
+            'colContenido'=>['idDescuento','nombre','descripcion','porcentaje','idDescuento'],
+            'modulo'=>'descuento', 
+            'idModeloP'=>'idDescuento',
+    ));        
+    
 ?>
-
-<h1>Manage Descuentos</h1>
-
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
-
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
-<div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
-
-<?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'descuento-grid',
-	'dataProvider'=>$model->search(),
-	'filter'=>$model,
-	'columns'=>array(
-		'idDescuento',
-		'nombre',
-		'descripcion',
-		'porcentaje',
-		'fechaAlta',
-		'usuarioCreacion',
-		array(
-			'class'=>'CButtonColumn',
-		),
-	),
-)); ?>

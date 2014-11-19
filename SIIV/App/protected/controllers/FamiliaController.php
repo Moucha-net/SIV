@@ -133,13 +133,9 @@ class FamiliaController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Familia('search');
-		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Familia']))
-			$model->attributes=$_GET['Familia'];
-
+		$familia = Familia::model()->findAll();
 		$this->render('admin',array(
-			'model'=>$model,
+			'familia'=>$familia, 
 		));
 	}
 

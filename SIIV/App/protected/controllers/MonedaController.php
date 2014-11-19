@@ -133,13 +133,9 @@ class MonedaController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Moneda('search');
-		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Moneda']))
-			$model->attributes=$_GET['Moneda'];
-
+		$moneda = Moneda::model()->findAll();
 		$this->render('admin',array(
-			'model'=>$model,
+			'moneda'=>$moneda, 
 		));
 	}
 

@@ -133,13 +133,9 @@ class TipoPagoController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new TipoPago('search');
-		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['TipoPago']))
-			$model->attributes=$_GET['TipoPago'];
-
+		$tipoPago = TipoPago::model()->findAll();
 		$this->render('admin',array(
-			'model'=>$model,
+			'tipoPago'=>$tipoPago, 
 		));
 	}
 
